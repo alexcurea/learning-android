@@ -1,19 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Spinner
+        android:id="@+id/spinner_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </Spinner>
 
     <TextView
+        android:id="@+id/tv_label_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:text="From:"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/spinner_event"
+        app:layout_constraintTop_toBottomOf="@id/spinner_event"
+
+        />
+
+    <Button
+        android:id="@+id/button_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/textColor"
+        android:text="CHOOSE START DATE"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@id/tv_label_from"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_from" />
+
+    <TextView
+        android:id="@+id/tv_label_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="To:"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/button_from"
+        app:layout_constraintStart_toStartOf="@id/button_from"
+        app:layout_constraintTop_toBottomOf="@id/button_from"
+
+
+        />
+
+    <Button
+        android:id="@+id/button_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/textColor"
+        android:text="CHOOSE START DATE"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@id/tv_label_to"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_to" />
+
+    <TextView
+        android:id="@+id/tv_label_np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Number of people:"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/button_to"
+        app:layout_constraintStart_toStartOf="@id/button_to"
+        app:layout_constraintTop_toBottomOf="@id/button_to"
+
+
+        />
+
+    <Text
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Minimum value"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="60dp"
+       app:layout_constraintTop_toBottomOf="@id/button_to"
+        app:layout_constraintStart_toStartOf="@id/button_to"
+        />
+
+    <Text
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Minimum value"
+        android:textColor="@color/textColor"
+        app:layout_constraintTop_toBottomOf="@id/button_to"
+        app:layout_constraintLeft_toRightOf="@id/editText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="@id/button_to"/>
+
+    <Button
+        android:id="@+id/button_ff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/buttonshape"
+        android:text="FIND ME FRIENDS"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@id/editText1"
+        app:layout_constraintStart_toStartOf="@id/editText"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/spinner_event"
+        app:srcCompat="@mipmap/ic_logo_foreground"
+        tools:layout_editor_absoluteX="151dp" />
+
 
 </android.support.constraint.ConstraintLayout>
