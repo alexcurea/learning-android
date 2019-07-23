@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@drawable/grdient"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+
+    >
 
     <Spinner
         android:id="@+id/spinner_event"
@@ -18,7 +20,8 @@
         android:background="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
 
     </Spinner>
@@ -92,7 +95,7 @@
 
         />
 
-    <Text
+
 
     <EditText
         android:id="@+id/editText"
